@@ -1,0 +1,25 @@
+<h1>Products</h1>
+<ul>
+    {% for p in products %}
+    <li>{{ p.name }}
+        <form action="/products/{{ p.id }}/delete/" method="POST" style="display: inline;">{% csrf_token%}
+            <input type="submit" value="Delete">
+        </form>
+    </li>
+    <ul>
+        <li>{{ p.price }}</li>
+        <li>{{ p.img }}</li>
+    </ul>
+    <li>
+            <form action="/products/{{ p.id }}/" method="GET" style="display: inline;">
+                <input type="submit" value="More">
+            </form>
+    </li>
+    {% endfor %}
+</ul>
+<form method="post" action="/products/add/">{% csrf_token%}
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="price" name="price">
+    <input type="text" placeholder="img" name="img">
+    <input type= "submit" value="Add">
+</form>

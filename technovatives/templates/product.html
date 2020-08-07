@@ -1,0 +1,11 @@
+<ul>
+    <li>{{ product.name }}
+        <form action="/products/{{ product.id }}/delete/" method="POST" style="display: inline;">{% csrf_token%}
+            <input type="submit" value="Delete">
+        </form>
+    </li>
+    <ul>
+        <li>{{ product.price }}</li>
+        <li>{{ product.img}}</li>
+    </ul>
+</ul>
