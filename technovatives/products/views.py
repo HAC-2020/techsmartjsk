@@ -31,7 +31,7 @@ def deleteProduct(request,request_id):
     return HttpResponseRedirect('/products/')    
 
 def checkout(request):
-     all_items = cart_items.objects.all()
+    all_items = cart_items.objects.all()
     total = 0
     tax = 0
     for c in all_items:
