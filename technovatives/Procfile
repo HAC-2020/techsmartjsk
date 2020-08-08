@@ -1,1 +1,1 @@
-web: waitress-serve --listen=*:8000 technovatives.wsgi:application
+web: waitress-serve --listen=*:$PORT technovatives.wsgi:application
