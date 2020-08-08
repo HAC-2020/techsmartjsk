@@ -31,7 +31,19 @@ def deleteProduct(request,request_id):
     return HttpResponseRedirect('/products/')    
 
 def checkout(request):
-    return   render(request,'checkout.html')                     
+     all_items = cart_items.objects.all()
+    total = 0
+    tax = 0
+    for c in all_items:
+        total += int(c.price)
+        tax = 0.05 * total
+    total_amount = total + tax    
+    return render(request,'checkout.html',
+    {
+        'cart_all' : all_items,
+        'total': total_amount,
+        'tax': tax,
+    })                   
 
 def about(request):
     return render(request,'about.html')   
