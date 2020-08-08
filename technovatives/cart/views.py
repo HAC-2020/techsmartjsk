@@ -8,7 +8,7 @@ def add_to_cart(request):
                     price = request.POST['price'], 
                     img = request.POST['img'])    
     newitem.save()   
-    return HttpResponseRedirect('/') 
+    return HttpResponseRedirect('/cart/') 
 
 def cart_all_items(request):
     all_items = cart_items.objects.all()
