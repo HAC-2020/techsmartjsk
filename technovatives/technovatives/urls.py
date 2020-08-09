@@ -5,7 +5,7 @@ if settings.DEBUG:
     from django.urls import path
     from products.views import getproducts, CreateProduct,deleteProduct,getproduct,index,checkout,about,contactus
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-    from cart.views import add_to_cart,cart_all_items
+    from cart.views import add_to_cart,cart_all_items,delete_cart_item
     urlpatterns = [
         path('',index),
         path('admin/', admin.site.urls),
@@ -14,6 +14,7 @@ if settings.DEBUG:
         path('products/<int:request_id>/delete/',deleteProduct),
         path('products/<int:request_id>/',getproduct),
         path('cartItem/add/',add_to_cart),
+        path('cartItem/delete/<int:item_id>',delete_cart_item),
         path('checkout/',checkout),
         path('cart/',cart_all_items),
         path('about/',about),
