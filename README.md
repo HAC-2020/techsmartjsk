@@ -2,6 +2,9 @@ Technovatives is a collective effort of engineering students. Technovatives aims
 We combine our innovation with the technical skills to create an innovative solution for the world. Hack Against COVID provide us the opportunity 
 to create an impact on the world with our solution. We are building a product to transform the shopping around the world with minimal physical interaction.
 
+More Project Info : www.devfolio.co/submissions/technovatives
+Visit Website at : http://technovatives.herokuapp.com/
+
 MEET OUR TEAM 
 
 1. Jaskirat Singh
